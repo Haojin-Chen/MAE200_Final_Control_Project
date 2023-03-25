@@ -46,13 +46,16 @@ C = [[1 0 0  0   0   0];...
 D = [0 0 0 0 0 0]'
 
 E = eye(6);
-%% Solve raccatti K
+%% Solve for Controller 
+ 
+% 
+% Solve raccatti K
 
 Q = eye(6)
 R = 1
 [X,K_inf,L] = icare(A,B,Q,R)
 
-%%
+% Solve for raccatti L using iCARE (use a-bk)
 
 Q1 = eye(6)
 Q2 = eye(6)
